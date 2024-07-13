@@ -17,6 +17,7 @@ jobs:
         env:
           TINACLIENTID: ${{ secrets.TINACLIENTID }}
           TINATOKEN: ${{ secrets.TINATOKEN }}
+          TINATOKEN: ${{ secrets.TINASEARCH }}
         run: npm run build
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
