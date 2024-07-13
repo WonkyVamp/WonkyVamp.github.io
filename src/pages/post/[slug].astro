@@ -1,14 +1,19 @@
 ---
-// Credit to @rachsmithcodes for this function
-export async function getStaticPaths() {
-	let posts = await Astro.glob(`../../posts/*.md`);
+title: "Post Page"
+description: "A detailed post page"
+---
 
-	return posts.map((post) => {
-		return {
-			params: { slug: post.frontmatter.slug },
-			props: { post: post },
-		};
-	});
+---
+export async function getStaticPaths() {
+  // Credit to @rachsmithcodes for this function
+  let posts = await Astro.glob(`../../posts/*.md`);
+
+  return posts.map((post) => {
+    return {
+      params: { slug: post.frontmatter.slug },
+      props: { post: post },
+    };
+  });
 }
 
 const { post } = Astro.props;
@@ -16,4 +21,3 @@ const { Content } = post;
 ---
 
 <Content />
-
