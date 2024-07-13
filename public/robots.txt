@@ -1,4 +1,4 @@
-Sitemap: https://lomr-blahg.netlify.app/sitemap-index.xml
+Sitemap: http://wonkyvamp.github.io
 
 User-agent: *
 Disallow:
