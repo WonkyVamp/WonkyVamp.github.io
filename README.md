@@ -6,7 +6,7 @@ Hello, welcome. This is a blog ("blahg" is the proper spelling for Chicagoans) t
 ccc
 ![cover](https://github.com/cassidoo/blahg/assets/1454517/b56ff04f-9499-48e7-be62-d9b422c4287d)
 
-## See the blahg
+## See the blah
 
 [blahg.netlify.app](https://blahg.netlify.app/)
 
