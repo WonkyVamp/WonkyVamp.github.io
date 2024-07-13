@@ -1,10 +1,14 @@
 ---
+title: "Tag Page"
+description: "Posts tagged with a specific tag"
+---
+
+---
 import BaseHead from "../../components/BaseHead.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 import Post from "../../components/Post.astro";
 import ColorScript from "../../components/ColorScript.astro";
-
 import { SITE_TITLE, SITE_DESCRIPTION } from "../../config";
 
 // Credit to @rachsmithcodes for helping out my lil ol brain
@@ -43,25 +47,25 @@ let sortedPosts = tag.sort(
 
 <!DOCTYPE html>
 <html lang="en-us">
-	<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	<body>
-		<Header />
-		<main>
-			<content>
-				<h3>Posts tagged with "{currentTag}"</h3>
-				<ul class="tags-list">
-					{
-						sortedPosts.map(
-							({
-								url,
-								frontmatter: { description, slug, title, tags, added: date },
-							}) => <Post {url} {description} {date} {slug} {title} {tags} />
-						)
-					}
-				</ul>
-			</content>
-			<Footer />
-		</main>
-		<ColorScript />
-	</body>
+  <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  <body>
+    <Header />
+    <main>
+      <content>
+        <h3>Posts tagged with "{currentTag}"</h3>
+        <ul class="tags-list">
+          {
+            sortedPosts.map(
+              ({
+                url,
+                frontmatter: { description, slug, title, tags, added: date },
+              }) => <Post {url} {description} {date} {slug} {title} {tags} />
+            )
+          }
+        </ul>
+      </content>
+      <Footer />
+    </main>
+    <ColorScript />
+  </body>
 </html>
